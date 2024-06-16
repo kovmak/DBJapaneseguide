@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="391.0" prefWidth="399.0" style="-fx-background-color: #2b2936;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mirald.presentation.controller.SignInController">
+
+
+    <!-- Поле для введення логіну -->
+    <TextField fx:id="usernameField" layoutX="38.0" layoutY="120.0" prefHeight="15.0" prefWidth="308.0" promptText="Username" style="-fx-background-color: #A9A9A9; -fx-font-family: Bahnschrift; -fx-text-fill: #373737;" />
+
+    <!-- Поле для введення пароля -->
+    <PasswordField fx:id="passwordField" layoutX="38.0" layoutY="162.0" prefHeight="8.0" prefWidth="308.0" promptText="Password" style="-fx-background-color: #A9A9A9; -fx-font-family: Bahnschrift; -fx-text-fill: #373737;" />
+
+    <!-- Горизонтальний контейнер для кнопок реєстрації та виходу -->
+    <HBox layoutX="88.0" layoutY="266.0" prefHeight="25.0" prefWidth="209.0" spacing="20">
+        <children>
+
+            <!-- Кнопка для входу -->
+            <Button onAction="#signIn" prefHeight="25.0" prefWidth="199.0" style="-fx-background-color: #6D5D6E; -fx-font-family: Bahnschrift-Light; -fx-text-fill: #F4EEE0; -fx-font-size: 16;" text="Sign in" />
+
+          <!-- Кнопка для виходу -->
+          <Button fx:id="exitButton" onAction="#exit" prefHeight="25.0" prefWidth="209.0" style="-fx-background-color: #6D5D6E; -fx-font-family: Bahnschrift-Light; -fx-text-fill: #F4EEE0; -fx-font-size: 16;" text="Log out" />
+        </children>
+    </HBox>
+
+    <!-- Заголовок -->
+    <Label layoutX="25.0" layoutY="58.0" style="-fx-font-family: Bahnschrift-Light; -fx-text-fill: #F4EEE0; -fx-font-size: 24; -fx-font-weight: bold;" text="Welcome to the story manager" />
+
+
+      <!-- Кнопка для переходу на сторінку реєстрації -->
+    <Button layoutX="88.0" layoutY="205.0" onAction="#goToRegistration" prefHeight="25.0" prefWidth="209.0" style="-fx-background-color: transparent; -fx-font-family: Bahnschrift-Light; -fx-text-fill: #F4EEE0; -fx-font-size: 16; -fx-underline: true; -fx-font-weight: bold;" text="Register an account" />
+
+
+</AnchorPane>

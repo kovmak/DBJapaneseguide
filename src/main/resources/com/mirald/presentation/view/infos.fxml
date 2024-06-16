@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #2b2936;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mirald.presentation.controller.InfoController">
+
+    <!-- Заповнений квадрат -->
+    <Rectangle fill="#413947" height="419.0" layoutX="0.0" layoutY="0.0" width="202.0" />
+
+    <VBox alignment="CENTER" prefHeight="63.0" prefWidth="600.0" spacing="10">
+        <Label fx:id="itemLabel" style="-fx-font-family: Bahnschrift-Light; -fx-text-fill: #F4EEE0; -fx-font-size: 16; -fx-font-weight: bold;" text="Item Name" />
+    </VBox>
+    <ScrollPane fitToWidth="true" hbarPolicy="NEVER" layoutX="40.0" layoutY="56.0" prefHeight="264.0" prefWidth="546.0" style="-fx-background-color: transparent;" vbarPolicy="AS_NEEDED">
+        <content>
+            <Label fx:id="detailsLabel" alignment="TOP_LEFT" maxWidth="531.0" prefWidth="517.0" style="-fx-font-family: Bahnschrift-Light; -fx-text-fill: #F4EEE0; -fx-font-size: 14; -fx-font-weight: bold;" text="Item Name" wrapText="true" />
+        </content>
+    </ScrollPane>
+
+    <Button fx:id="exitButton" layoutX="494.0" layoutY="345.0" onAction="#exit" prefHeight="25.0" prefWidth="92.0" style="-fx-background-color: #6D5D6E; -fx-font-family: Bahnschrift-Light; -fx-text-fill: #F4EEE0; -fx-font-size: 16;" text="Exit" />
+
+</AnchorPane>

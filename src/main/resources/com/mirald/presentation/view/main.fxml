@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="563.0" prefWidth="912.0" style="-fx-background-color: #2b2936;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mirald.presentation.controller.MainController">
+
+    <!-- Заповнений квадрат -->
+    <Rectangle fill="#413947" height="563.0" layoutX="0.0" layoutY="0.0" width="219.0" />
+    <Line endX="-251.0" layoutX="430.0" layoutY="103.0" startX="-393.0" stroke="#6D5D6E" />
+    <Line endX="-251.0" layoutX="432.0" layoutY="442.0" startX="-393.0" stroke="#6D5D6E" />
+
+  <VBox layoutX="54.0" layoutY="31.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="50.0" prefWidth="96.0" spacing="10">
+    <Label fx:id="userLabel" layoutX="10.0" layoutY="10.0" style="-fx-font-family: Bahnschrift-Light; -fx-text-fill: #F4EEE0; -fx-font-size: 14;" text="User: " />
+    <Label fx:id="accessLevelLabel" layoutX="10.0" layoutY="30.0" style="-fx-font-family: Bahnschrift-Light; -fx-text-fill: #F4EEE0; -fx-font-size: 14;" text="Access Level: " />
+  </VBox>
+
+    <ListView fx:id="ListView" border="$null" layoutX="232.0" layoutY="39.0" prefHeight="504.0" prefWidth="668.0" style="-fx-background-color: transparent; -fx-font-family: Bahnschrift-Light; -fx-text-fill: #F4EEE0; -fx-font-size: 16;" />
+
+  <VBox layoutX="37.0" layoutY="153.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="83.0" prefWidth="143.0" spacing="10">
+      <Button onAction="#titleButtonClicked" prefHeight="33.0" prefWidth="145.0" style="-fx-background-color: #6D5D6E; -fx-font-family: Bahnschrift-Light; -fx-text-fill: #F4EEE0; -fx-font-size: 16;" text="Titles" />
+      <Button onAction="#authorsButtonClicked" prefHeight="33.0" prefWidth="145.0" style="-fx-background-color: #6D5D6E; -fx-font-family: Bahnschrift-Light; -fx-text-fill: #F4EEE0; -fx-font-size: 16;" text="Authors" />
+      <Button onAction="#storyButtonClicked" prefHeight="33.0" prefWidth="145.0" style="-fx-background-color: #6D5D6E; -fx-font-family: Bahnschrift-Light; -fx-text-fill: #F4EEE0; -fx-font-size: 16;" text="Story" />
+      <Button fx:id="addButton" onAction="#addWindow" prefHeight="25.0" prefWidth="148.0" style="-fx-background-color: #6D5D6E; -fx-font-family: Bahnschrift-Light; -fx-text-fill: #F4EEE0; -fx-font-size: 16;" text="Add data" />
+      <Button fx:id="deleteButton" onAction="#deleteWindow" prefHeight="33.0" prefWidth="145.0" style="-fx-background-color: #6D5D6E; -fx-font-family: Bahnschrift-Light; -fx-text-fill: #F4EEE0; -fx-font-size: 16;" text="Delete data" />
+  </VBox>
+
+ <Button fx:id="exitButton" layoutX="62.0" layoutY="477.0" onAction="#exit" prefHeight="25.0" prefWidth="96.0" style="-fx-background-color: #6D5D6E; -fx-font-family: Bahnschrift-Light; -fx-text-fill: #F4EEE0; -fx-font-size: 16;" text="Exit" />
+
+</AnchorPane>

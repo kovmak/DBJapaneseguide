@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<AnchorPane prefHeight="328.0" prefWidth="456.0" style="-fx-background-color: #2b2936;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mirald.presentation.controller.AddNewElementsController">
+
+    <VBox alignment="CENTER" prefHeight="138.0" prefWidth="505.0" spacing="10.0">
+        <children>
+            <Label style="-fx-font-family: Bahnschrift-Light; -fx-text-fill: #F4EEE0; -fx-font-size: 24;" text="Select a type:" />
+            <Line endX="559.0" startX="150" stroke="#6D5D6E" strokeType="CENTERED" strokeWidth="2" />
+            <HBox alignment="CENTER" spacing="10.0">
+                <children>
+                    <CheckBox fx:id="titleCheckBox" onAction="#onCheckBoxAction" style="-fx-font-family: Bahnschrift-Light; -fx-text-fill: #F4EEE0; -fx-font-size: 14;" text="Title" />
+                    <CheckBox fx:id="authorsCheckBox" onAction="#onCheckBoxAction" style="-fx-font-family: Bahnschrift-Light; -fx-text-fill: #F4EEE0; -fx-font-size: 14;" text="Author" />
+                    <CheckBox fx:id="storyCheckBox" onAction="#onCheckBoxAction" style="-fx-font-family: Bahnschrift-Light; -fx-text-fill: #F4EEE0; -fx-font-size: 14;" text="Story" />
+                </children>
+            </HBox>
+        </children>
+    </VBox>
+    <HBox alignment="CENTER" layoutX="122.0" layoutY="270.0" prefHeight="35.0" prefWidth="235.0" spacing="10">
+        <Button fx:id="saveButton" onAction="#onSave" prefHeight="35.0" prefWidth="99.0" style="-fx-background-color: #6D5D6E; -fx-font-family: Bahnschrift-Light; -fx-text-fill: #F4EEE0; -fx-font-size: 16;" text="Save" />
+        <Button onAction="#onCancel" prefHeight="35.0" prefWidth="92.0" style="-fx-background-color: #6D5D6E; -fx-font-family: Bahnschrift-Light; -fx-text-fill: #F4EEE0; -fx-font-size: 16;" text="Exit" />
+    </HBox>
+    <VBox layoutX="50.0" layoutY="117.0" prefHeight="95.0" prefWidth="398.0" spacing="10">
+        <TextField fx:id="textField1" promptText="Enter the name" style="-fx-background-color: #A9A9A9; -fx-font-family: Bahnschrift; -fx-text-fill: #373737;" />
+        <TextField fx:id="textField2" promptText="Enter a description" style="-fx-background-color: #A9A9A9; -fx-font-family: Bahnschrift; -fx-text-fill: #373737;" />
+        <TextField fx:id="textField3" promptText="Enter the address" style="-fx-background-color: #A9A9A9; -fx-font-family: Bahnschrift; -fx-text-fill: #373737;" />
+    </VBox>
+</AnchorPane>

@@ -1,33 +1,34 @@
-DROP TABLE IF EXISTS Events;
+DROP TABLE IF EXISTS Title;
 DROP TABLE IF EXISTS Client;
-DROP TABLE IF EXISTS Person;
-DROP TABLE IF EXISTS Description;
+DROP TABLE IF EXISTS Authors;
+DROP TABLE IF EXISTS Story;
 DROP TABLE IF EXISTS users;
 
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
-CREATE TABLE Description (
-                             id              UUID            PRIMARY KEY DEFAULT uuid_generate_v4(),
-                             name            VARCHAR(255)    NOT NULL,
-                             description     TEXT            NOT NULL
+CREATE TABLE Story (
+                           id              UUID            PRIMARY KEY DEFAULT uuid_generate_v4(),
+                           name            VARCHAR(255)    NOT NULL,
+                           description     TEXT            NOT NULL
 );
 
-CREATE TABLE Person (
+CREATE TABLE Authors (
                         id              UUID            PRIMARY KEY DEFAULT uuid_generate_v4(),
                         name            VARCHAR(64)     NOT NULL,
                         address         TEXT            NOT NULL UNIQUE
 );
 
-CREATE TABLE Events (
-                        id              UUID            PRIMARY KEY DEFAULT uuid_generate_v4(),
-                        name            VARCHAR(255)    NOT NULL,
-                        description     TEXT            NOT NULL
+CREATE TABLE Title (
+                          id              UUID            PRIMARY KEY DEFAULT uuid_generate_v4(),
+                          name            VARCHAR(255)    NOT NULL,
+                          description     TEXT            NOT NULL
 );
 
 CREATE TABLE Client (
                         id              UUID            PRIMARY KEY DEFAULT uuid_generate_v4(),
-                        name            VARCHAR(255)    NOT NULL,
-                        description_id  UUID            REFERENCES Description(id)
+                        name            VARCHAR(64)     NOT NULL,
+                        phone           VARCHAR(64)     NOT NULL UNIQUE,
+                        address         TEXT            NOT NULL UNIQUE
 );
 
 CREATE TABLE users (
