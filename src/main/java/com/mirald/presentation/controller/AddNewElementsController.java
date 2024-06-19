@@ -42,9 +42,18 @@ public class AddNewElementsController {
 
     @FXML
     public void initialize() {
-        titleCheckBox.setOnAction(event -> updateCheckBoxStyle(titleCheckBox));
-        authorsCheckBox.setOnAction(event -> updateCheckBoxStyle(authorsCheckBox));
-        storyCheckBox.setOnAction(event -> updateCheckBoxStyle(storyCheckBox));
+        titleCheckBox.setOnAction(event -> {
+            updateCheckBoxStyle(titleCheckBox);
+            onCheckBoxAction();
+        });
+        authorsCheckBox.setOnAction(event -> {
+            updateCheckBoxStyle(authorsCheckBox);
+            onCheckBoxAction();
+        });
+        storyCheckBox.setOnAction(event -> {
+            updateCheckBoxStyle(storyCheckBox);
+            onCheckBoxAction();
+        });
     }
 
     private void updateCheckBoxStyle(CheckBox checkBox) {
